@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Heart Care Project</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+  />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="hamburger-menu">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+            <span>Close</span>
+        </div>
+        <header id="home" class="header">
+            <div class="img-wrapper">
+                <img src="{{ url_for('static',filename='img/young-male-psysician-with-patient-measuring-blood-pressure (1).jpg') }}" alt="" srcset="">
+            </div>
+            <div class="banner">
+                <h1>Heart-Care Project</h1>
+                <p>An IOT Solution for Cardiovascular Health Monitoring and Preservation</p>
+                <a href="#check-heart-status"><button> Get Started</button></a>
+            </div>
+        </header>
+
+        <section class="side-bar">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#home" class="menu-link" data-content="Home">Home</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#data-visual" class="menu-link" data-content="Data Visualization">Data Visualization</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#check-heart-status" class="menu-link" data-content="Check Heart Status">Check Heart Status</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#recommendations" class="menu-link" data-content="Recommendations">Recommendations</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#emergency-contacts" class="menu-link" data-content="Emergency Contacts">Emergency Contacts</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="data-visual" class="data-visual">
+            <div class="section-header">
+                <h1 class="section-heading">Data Visualization</h1>
+                <div class="underline"></div>
+            </div>
+            <div class="visual-section-body">
+                <span class="vital">
+                    <h3>Heart Rate</i></h3>
+
+                    <p>{{ result }}</p>
+                </span>
+                <span class="vital">
+                    <h3>Cholesterol</h3>
+                    <p>Lorem Bpm</p>
+                </span>
+                <span class="vital">
+                    <h3>ECG <i class="fa fa-heartbeat" aria-hidden="true"></i></h3>
+                    <p>Lorem Bpm</p>
+                </span>
+                <span class="vital">
+                    <h3>Blood Pressure <i class="fa fa-tint" aria-hidden="true"></i>
+                    </h3>
+                    <p>Lorem mmHg</p>
+                </span>
+                <span class="vital">
+                    <h3>Blood Sugar </h3>
+                    <p>Lorem ipsem</p>
+                </span>
+
+            </div>
+        </section>
+       
+        <section id="check-heart-status" class="check-heart-status">
+            <div class="section-header">
+                <h1 class="section-heading">Check Heart Status</h1>
+                <div class="underline"></div>
+            </div>
+            <div class="section-body">
+                <p>Follow the instructions on the Device (IoT Wearable) manual and fill the form below.</p>
+
+                <div class="form-wrapper">
+                    <form action="/">
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="age">Age:</label>
+                          </div>
+                          <div class="col-75">
+                            <input type="number" id="age" name="age" placeholder="Your Age..">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="cp">Do you experience any chest pain when you exercise?</label>
+                          </div>
+                          <div class="col-75">
+                            <select id="cp" name="cp">
+                                <option value="">---</option>
+                              <option value="0">No pain at all!</option>
+                              <option value="1">Mild pain</option>
+                              <option value="2">Severe Pain</option>
+                            </select>
+                          </div>
+                        </div>
+                        <br><br><br>
+                        <div class="row">
+                          <input type="submit" value="Run ML check!">
+                        </div>
+                        </form>
+                </div>
+            </div>
+            
+        </section>
+        <section id="recommendations" class="recommendations">
+            <div class="section-header">
+                <h1 class="section-heading">Recommendations</h1>
+                <div class="underline"></div>
+            </div>
+        </section>
+        <section id="emergency-contacts" class="emergency-contacts">
+            <div class="section-header">
+                <h1 class="section-heading">Emergency Contacts</h1>
+                <div class="underline"></div>
+            </div>
+        </section>
+          
+        
+    </div>
+
+    
+
+    
+
+    <script src="./static/script.js"></script>
+</body>
+</html>
